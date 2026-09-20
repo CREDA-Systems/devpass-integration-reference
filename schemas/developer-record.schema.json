@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://devpass.example/schemas/developer-record.schema.json",
+  "$id": "https://github.com/CREDA-Systems/devpass-integration-reference/schemas/developer-record.schema.json,
   "title": "DevPass Developer Record Reference Schema",
   "description": "Non-normative public reference interface for representing a DevPass developer record.",
   "type": "object",
