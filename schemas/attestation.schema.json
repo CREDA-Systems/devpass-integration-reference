@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://devpass.example/schemas/attestation.schema.json",
+  "title": "DevPass Attestation Reference Schema",
+  "description": "Non-normative public reference interface for representing a third-party attestation associated with a DevPass developer record.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "attestation_id",
+    "subject_reference",
+    "attestation_type",
+    "issuer_reference",
+    "issued_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "attestation_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique identifier for the attestation."
+    },
+    "subject_reference": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Reference to the developer or developer record associated with the attestation."
+    },
+    "attestation_type": {
+      "type": "string",
+      "enum": [
+        "employment",
+        "education",
+        "credential",
+        "authorship",
+        "project_participation",
+        "skill_evidence",
+        "reviewer_verification",
+        "other"
+      ],
+      "description": "Simplified public reference category for the attestation."
+    },
+    "issuer_reference": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Reference to the organization, institution, platform, verifier, or other source issuing the attestation."
+    },
+    "claim_reference": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Optional reference to the statement, claim, credential, activity, or evidence being attested."
+    },
+    "evidence_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Optional references to supporting evidence."
+    },
+    "issued_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp at which the attestation was issued."
+    },
+    "expires_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Optional expiration timestamp."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "revoked",
+        "expired",
+        "unknown"
+      ],
+      "description": "Simplified public lifecycle status."
+    },
+    "provenance_reference": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Optional implementation-defined provenance or integrity reference."
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Optional implementation-specific metadata. Consumers should not treat metadata as normative trust or weighting semantics."
+    }
+  }
+}
