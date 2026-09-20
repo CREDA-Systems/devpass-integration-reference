@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://devpass.example/schemas/developer-record.schema.json",
+  "title": "DevPass Developer Record Reference Schema",
+  "description": "Non-normative public reference interface for representing a DevPass developer record.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "developer_record_id",
+    "subject_reference",
+    "status",
+    "updated_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "developer_record_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique identifier for the developer record."
+    },
+    "subject_reference": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Public or implementation-defined reference to the developer associated with the record."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "suspended",
+        "expired",
+        "unknown"
+      ],
+      "description": "Simplified public reference status. This vocabulary is non-normative."
+    },
+    "credential_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Optional references to credentials associated with the record."
+    },
+    "authorship_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Optional references to authorship or contribution evidence."
+    },
+    "attestation_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Optional references to third-party attestations associated with the record."
+    },
+    "skill_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Optional references to skills or skill evidence."
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp at which this public record representation was last updated."
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Optional implementation-specific metadata. Consumers should not treat metadata as normative verification semantics."
+    }
+  }
+}
