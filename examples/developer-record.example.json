@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.1",
+  "developer_record_id": "dev-record-001",
+  "subject_reference": "developer-ref-123",
+  "status": "active",
+  "credential_references": [
+    "credential-ref-001"
+  ],
+  "authorship_references": [
+    "authorship-ref-001"
+  ],
+  "attestation_references": [
+    "attestation-ref-001"
+  ],
+  "skill_references": [
+    "skill-ref-python",
+    "skill-ref-distributed-systems"
+  ],
+  "updated_at": "2026-09-20T16:00:00Z"
+}
