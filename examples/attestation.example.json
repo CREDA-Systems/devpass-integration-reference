@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.1",
+  "attestation_id": "attestation-ref-001",
+  "subject_reference": "developer-ref-123",
+  "attestation_type": "employment",
+  "issuer_reference": "example-employer-001",
+  "claim_reference": "employment-claim-ref-001",
+  "evidence_references": [
+    "evidence-ref-001"
+  ],
+  "issued_at": "2026-09-01T14:00:00Z",
+  "expires_at": null,
+  "status": "active",
+  "provenance_reference": "example-provenance-reference"
+}
