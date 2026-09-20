@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.1",
+  "verification_result_id": "verification-ref-001",
+  "developer_record_id": "dev-record-001",
+  "status": "verified",
+  "verification_context_reference": "example-verification-context-v1",
+  "attestation_references": [
+    "attestation-ref-001"
+  ],
+  "evidence_references": [
+    "evidence-ref-001"
+  ],
+  "verified_at": "2026-09-20T16:05:00Z",
+  "valid_until": "2026-10-20T16:05:00Z",
+  "provenance_reference": "example-verification-provenance"
+}
