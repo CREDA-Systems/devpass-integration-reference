@@ -23,7 +23,6 @@ The public architecture exposes integration structures without exposing the prop
 ## Reference Flow
 
 ![DevPass Integration Reference Architecture](diagrams/devpass-integration-architecture.svg)
-
 Developer
    │
    ▼
