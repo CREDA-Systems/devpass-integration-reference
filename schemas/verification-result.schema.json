@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://devpass.example/schemas/verification-result.schema.json",
+  "$id": "https://github.com/CREDA-Systems/devpass-integration-reference/schemas/verification-result.schema.json",
   "title": "DevPass Verification Result Reference Schema",
   "description": "Non-normative public reference interface for representing a machine-readable DevPass verification result.",
   "type": "object",
